@@ -5,9 +5,9 @@
     <meta charset="UTF-8" />
     <link href="src/styles.css" />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,181 +17,218 @@
       rel="stylesheet"
     />
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
-
   </head>
 
   <body>
     <div class="app">
       <div class="container-weather">
-    <div class="container">
-      
-      <div class="row">
-        <div class="col-3 d-flex">
-          <div class="currentcity d-flex align-items-center"> 
-            <div id="currentCity"> 
-              Madrid
-            </div>
-            <img class="placetag ml-2" img src="icons/place-tag.png" width="20px"  />
-          </div>
-        </div>
-        <div class="col-3">
-        </div>
-      
-          <div class="col-3">
-            <div class="today"> 
-              <div id="dateToday">
-                Today 20:30 </div>
-              </div>
-            <img class="timeicon" img src="icons/time_icon.png" width="29px" />
-          </div>
-        </div>
-      </div>
-      <div class="container">
-      
+        <div class="container">
           <div class="row">
-            <div class="col">
-                <form id="searchCity">
-              <input
-                type="search"
-                placeholder="Enter a city.."
-                class="form-control search-input city"
-                id="citySearch"
+            <div class="col-3 d-flex">
+              <div class="currentcity d-flex align-items-center">
+                <div id="currentCity">Madrid</div>
+                <img
+                  class="placetag ml-2"
+                  img
+                  src="icons/place-tag.png"
+                  width="20px"
+                />
+              </div>
+            </div>
+            <div class="col-3"></div>
+
+            <div class="col-3">
+              <div class="today">
+                <div id="dateToday">Today 20:30</div>
+              </div>
+              <img
+                class="timeicon"
+                img
+                src="icons/time_icon.png"
+                width="29px"
               />
             </div>
-          </form>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <form id="searchCity">
+                <input
+                  type="search"
+                  placeholder="Enter a city.."
+                  class="form-control search-input city"
+                  id="citySearch"
+                />
+              </form>
+            </div>
             <div class="col">
               <button>Search</button>
             </div>
           </div>
         </div>
-      <div class="secondrow">
+        <div class="secondrow">
           <div class="weatherinfo">
-          <div class="row">
-            <div class="col">
-          <ul>
-            <li>
-              <span>Precipitation:</span>
-              <span class="percentage" id="precipitation">27%</span>
-              <img class="precipitationicon" img src="icons/precipitation-icon.png" width="20px" /> 
-            
-              <hr class="precipitationline">
-            </li>
-            <li>
-              <span> Humidity: </span>
-              <span class="percentage">
-                  <span id="humidity"> 87%
+            <div class="row">
+              <div class="col">
+                <ul>
+                  <li>
+                    <span>Precipitation:</span>
+                    <span class="percentage" id="precipitation">27%</span>
+                    <img
+                      class="precipitationicon"
+                      img
+                      src="icons/precipitation-icon.png"
+                      width="20px"
+                    />
+
+                    <hr class="precipitationline" />
+                  </li>
+                  <li>
+                    <span> Humidity: </span>
+                    <span class="percentage">
+                      <span id="humidity"> 87% </span>
                     </span>
-              </span>
-              <img class="humidityicon" img src="icons/HUMIDITY-icon.png" width="20px" /> 
-              
-              <hr class="humidityline">
-            </li>
-            <li>
-              <span>Wind:</span>
-              <span class="percentage">
-                <span id ="wind"> 16 km/h</span>
-              </span>
-              <img class="windicon" img src="icons/wind-icon.png" width="20px" /> 
-            </span>
-            </li>
-          </ul>
-        </div>
-      
-      <div class="col">
-        <div class="icontoday">
-          <img class="actualicon" img src="icons/suncloud-icon.png" width="131px"/>
-            </div>
-          </div>
-          <div class="col">
-              <div class="temperaturenow">
-                <div id= "temperatureNow" > 17 </div> 
+                    <img
+                      class="humidityicon"
+                      img
+                      src="icons/HUMIDITY-icon.png"
+                      width="20px"
+                    />
+
+                    <hr class="humidityline" />
+                  </li>
+                  <li>
+                    <span>Wind:</span>
+                    <span class="percentage">
+                      <span id="wind"> 16 km/h</span>
+                    </span>
+                    <img
+                      class="windicon"
+                      img
+                      src="icons/wind-icon.png"
+                      width="20px"
+                    />
+                  </li>
+                </ul>
               </div>
-              <div class="unit"> ºc </div>
-              <div class="actualtemp">
-                <img class="actualtemp" img src="icons/temp-icon.png" width="30px" />
-                  </div>
-          </div>
-        </div>
 
-          <hr class="boldline">
-         
-          <div class="row row-cols-5">
+              <div class="col">
+                <div class="icontoday">
+                  <img
+                    class="actualicon"
+                    img
+                    src="icons/suncloud-icon.png"
+                    width="131px"
+                  />
+                </div>
+              </div>
+              <div class="col">
+                <div class="temperaturenow">
+                  <div id="temperatureNow">17</div>
+                </div>
+                <div class="unit">ºc</div>
+                <div class="actualtemp">
+                  <img
+                    class="actualtemp"
+                    img
+                    src="icons/temp-icon.png"
+                    width="30px"
+                  />
+                </div>
+              </div>
+            </div>
 
-             
-          
-              <div class="col"> 
+            <hr class="boldline" />
+
+            <div class="row row-cols-5">
+              <div class="col">
                 <span class="mon"> Mon </span>
                 <div class="mondayicon">
-          <img class="mondayicon" img src="icons/rain-icon.png" width="80px" height="85px" />
+                  <img
+                    class="mondayicon"
+                    img
+                    src="icons/rain-icon.png"
+                    width="80px"
+                    height="85px"
+                  />
+                </div>
+                <span class="maxtemp"> 17º </span>
+                <span class="smallvl"></span>
+                <span class="mintemp"> 14º </span>
               </div>
-           <span class="maxtemp"> 17º </span>
-           <span class = "smallvl"></span>
-           <span class="mintemp"> 14º </span>
-            </div>
-          
-              <div class="col"> 
+
+              <div class="col">
                 <span class="tues"> Tue </span>
-               
+
                 <div class="tuesdayicon">
-                  <img class="tuesdayicon" img src="icons/rain-icon.png" width="80px" height="85px" />
-                  
+                  <img
+                    class="tuesdayicon"
+                    img
+                    src="icons/rain-icon.png"
+                    width="80px"
+                    height="85px"
+                  />
                 </div>
                 <span class="maxtemp"> 15º </span>
-           <span class = "smallvl"></span>
-           <span class="mintemp"> 12º </span>
+                <span class="smallvl"></span>
+                <span class="mintemp"> 12º </span>
               </div>
-              
-          
+
               <div class="col">
                 <span class="wed"> Wed</span>
-                
-               
+
                 <div class="wednesdayicon">
-                  <img class="wednesdayicon" img src="icons/SUN-icon.png" width="84px" height="85px" />
-                  
+                  <img
+                    class="wednesdayicon"
+                    img
+                    src="icons/SUN-icon.png"
+                    width="84px"
+                    height="85px"
+                  />
                 </div>
                 <span class="maxtemp"> 20º </span>
-           <span class = "smallvl"></span>
-           <span class="mintemp"> 12º </span>
-                
+                <span class="smallvl"></span>
+                <span class="mintemp"> 12º </span>
               </div>
-          
+
               <div class="col">
                 <span class="thurs"> Thu </span>
 
                 <div class="thursdayicon">
-                  <img class="thursdayicon" img src="icons/SUN-icon.png" width="84px" height="85px" />
-                  
+                  <img
+                    class="thursdayicon"
+                    img
+                    src="icons/SUN-icon.png"
+                    width="84px"
+                    height="85px"
+                  />
                 </div>
                 <span class="maxtemp"> 18º</span>
-           <span class = "smallvl"></span>
-           <span class="mintemp"> 10º </span>
-                
+                <span class="smallvl"></span>
+                <span class="mintemp"> 10º </span>
               </div>
-          
+
               <div class="col">
                 <span class="fri"> Fri</span>
                 <div class="fridayicon">
-                  <img class="fridayicon" img src="icons/rain-icon.png" width="80px" height="85px" />
-                  
+                  <img
+                    class="fridayicon"
+                    img
+                    src="icons/rain-icon.png"
+                    width="80px"
+                    height="85px"
+                  />
                 </div>
                 <span class="maxtemp"> 17º</span>
-           <span class = "smallvl"></span>
-           <span class="mintemp"> 10º </span>
-                
-                
+                <span class="smallvl"></span>
+                <span class="mintemp"> 10º </span>
               </div>
-              
-          
-             
-          </div>
-       
             </div>
           </div>
         </div>
       </div>
-        
-      
+    </div>
 
     <script src="src/index.js"></script>
   </body>
