@@ -1,0 +1,231 @@
+.container-weather {
+  width: 750px;
+  height: 540px;
+  background-color: #efb08c;
+  position: relative;
+  margin: 100px auto;
+  filter: drop-shadow(0px 0px 8px rgb(184, 184, 184));
+  padding: 30px;
+  border-radius: 40px;
+}
+.placetag {
+  position: relative;
+  left: 10px;
+}
+form {
+  font-family: Rubik;
+}
+button {
+  border-radius: 90px;
+  width: 150px;
+  height: 34px;
+  font-size: 15px;
+  font-family: Rubik;
+  background-color: white;
+  position: relative;
+  left: 10px;
+}
+.currentcity {
+  font-family: Rubik;
+  font-size: 42px;
+  font-weight: bold;
+}
+.today {
+  font-family: Roboto;
+  font-size: 17px;
+  right: -167px;
+  bottom: -25px;
+  position: relative;
+}
+
+.city {
+  border-radius: 90px;
+  width: 476px;
+  height: 34px;
+  border-width: 2px;
+  border-color: black;
+  position: relative;
+  float: left;
+}
+
+.timeicon {
+  position: relative;
+  right: -285px;
+  top: -4px;
+}
+
+.weatherinfo {
+  position: relative;
+  top: 40px;
+  left: -10px;
+}
+ul {
+  font-family: Rubik;
+  font-size: 15px;
+  list-style: none;
+}
+
+li {
+  height: 40px;
+}
+hr.precipitationline {
+  margin-top: 2px;
+  width: 255px;
+  height: 1px;
+  border-top: 2px solid black;
+  background-color: black;
+  opacity: 70%;
+}
+
+hr.humidityline {
+  width: 255px;
+  margin-top: 2px;
+  height: 1px;
+  border-top: 2px solid black;
+  opacity: 70%;
+}
+
+.percentage {
+  font-family: Rubik;
+  font-size: 18px;
+  font-weight: bolder;
+  position: relative;
+  float: right;
+  top: -3px;
+}
+
+.precipitationicon {
+  position: relative;
+  left: -7px;
+  bottom: -2px;
+  float: right;
+}
+
+.humidityicon {
+  position: relative;
+  float: right;
+  left: -7px;
+  bottom: -3px;
+}
+
+.windicon {
+  position: relative;
+  float: right;
+  left: -7px;
+  bottom: -2px;
+}
+
+.icontoday {
+  position: relative;
+  bottom: -1px;
+  left: 30px;
+}
+
+.temperaturenow {
+  font-size: 92px;
+  position: relative;
+  font-family: Rubik;
+  top: -1px;
+  left: -12px;
+}
+.unit {
+  font-size: 42px;
+  position: relative;
+  top: -120px;
+  font-family: Rubik;
+  left: 85px;
+}
+
+.actualtemp {
+  position: relative;
+  top: -83px;
+  left: 65px;
+}
+
+.secondrow {
+  position: relative;
+  top: -15px;
+  left: -5px;
+}
+
+hr.boldline {
+  border-top: 3px solid black;
+  display: block;
+  height: 2px;
+  position: relative;
+  border-radius: 5px;
+  top: -160px;
+  width: 660px;
+  left: 28px;
+  color: black;
+  opacity: 80%;
+}
+.row-cols-5 {
+  position: relative;
+  left: 15px;
+  top: -160px;
+  font-family: Rubik;
+  font-size: 16px;
+  font-weight: bolder;
+  text-align: center;
+  right: -20px;
+}
+
+.vertical {
+  border-left: 1px solid black;
+  height: 168px;
+  position: relative;
+  left: 50%;
+  left: -15px;
+}
+
+.mondayicon {
+  position: relative;
+  top: 10px;
+}
+
+.tuesdayicon {
+  position: relative;
+  top: 10px;
+}
+
+.wednesdayicon {
+  position: relative;
+  top: 10px;
+}
+
+.thursdayicon {
+  position: relative;
+  top: 10px;
+}
+
+.fridayicon {
+  position: relative;
+  top: 10px;
+}
+.maxtemp {
+  font-size: 20px;
+  font-family: Rubik;
+  font-weight: bolder;
+  position: relative;
+  left: -4px;
+  bottom: -50px;
+}
+
+.smallvl {
+  border-left: 1px solid black;
+  height: 24px;
+  position: relative;
+  left: 6px;
+  bottom: -50px;
+}
+
+.mintemp {
+  font-size: 20px;
+  font-family: Rubik;
+  font-weight: lighter;
+  color: white;
+  position: relative;
+  right: -22px;
+  bottom: -50px;
+}
