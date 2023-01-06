@@ -26,7 +26,7 @@ timeToday.innerHTML = `${day}, ${hours}:${minutes}`;
 
 function displayWeatherCondition(response) {
   document.querySelector("#currentCity").innerHTML = response.data.name;
-  if (response.data.main.temp < 10 && response.data.main.temp > 0) {
+  if (response.data.main.temp <= 10 && response.data.main.temp >= 0) {
     document.querySelector(
       "#temperatureNow"
     ).innerHTML = `&nbsp;&nbsp;${Math.round(response.data.main.temp)}`;
