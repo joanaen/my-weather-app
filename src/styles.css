@@ -27,7 +27,7 @@ button {
 }
 .currentcity {
   font-family: Rubik;
-  font-size: 37px;
+  font-size: 40px;
   font-weight: bold;
 }
 .timetoday {
@@ -46,7 +46,6 @@ button {
   border-width: 2px;
   border-color: black;
   position: relative;
-  float: left;
 }
 
 .timeicon {
@@ -95,7 +94,7 @@ hr.humidityline {
   top: -3px;
 }
 
-.precipitationicon {
+.airpressure-icon {
   position: relative;
   left: -7px;
   bottom: -2px;
@@ -123,24 +122,23 @@ hr.humidityline {
 }
 
 .temperaturenow {
-  font-size: 90px;
+  font-size: 87px;
   position: relative;
   font-family: Rubik;
-  top: -1px;
-  right: 5px;
+  left: 20px;
 }
 .unit {
   font-size: 42px;
   position: relative;
   top: -120px;
   font-family: Rubik;
-  left: 100px;
+  left: 120px;
 }
 
 .actualtemp {
   position: relative;
-  top: -83px;
-  left: 72px;
+  top: -81px;
+  left: 85px;
 }
 
 .secondrow {
@@ -155,7 +153,7 @@ hr.boldline {
   height: 2px;
   position: relative;
   border-radius: 5px;
-  top: -160px;
+  top: -150px;
   width: 660px;
   left: 28px;
   color: black;
@@ -164,20 +162,12 @@ hr.boldline {
 .row-cols-5 {
   position: relative;
   left: 15px;
-  top: -160px;
+  top: -140px;
   font-family: Rubik;
   font-size: 16px;
   font-weight: bolder;
   text-align: center;
   right: -20px;
-}
-
-.vertical {
-  border-left: 1px solid black;
-  height: 168px;
-  position: relative;
-  left: 50%;
-  left: -15px;
 }
 
 .mondayicon {
@@ -229,4 +219,8 @@ hr.boldline {
   position: relative;
   right: -22px;
   bottom: -50px;
+}
+.coded-by {
+  font-size: smaller;
+  text-align: center;
 }
