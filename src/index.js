@@ -43,9 +43,6 @@ function displayWeatherCondition(response) {
       response.data.main.temp
     )}`;
   }
-  if (response.data.main.temp < -1) {
-    document.querySelector("#temperatureNow").style.left = "-30px";
-  }
 
   document.querySelector("#pressure").innerHTML =
     response.data.main.pressure + "&nbsp;hPa";
