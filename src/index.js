@@ -25,7 +25,12 @@ let timeToday = document.querySelector("#dateToday");
 timeToday.innerHTML = `${day}, ${hours}:${minutes}`;
 
 function displayWeatherCondition(response) {
-  document.querySelector("#currentCity").innerHTML = response.data.name;
+  let city = response.data.name;
+  if (city.length > 15) {
+    city = city.substring(0, 12) + "...";
+  }
+  document.querySelector("#currentCity").innerHTML = city;
+
   if (response.data.main.temp <= 10 && response.data.main.temp >= 0) {
     document.querySelector(
       "#temperatureNow"
@@ -36,12 +41,13 @@ function displayWeatherCondition(response) {
     )}`;
   }
 
+  document.querySelector("#pressure").innerHTML =
+    response.data.main.pressure + "&nbsp;hPa";
   document.querySelector("#humidity").innerHTML =
     response.data.main.humidity + "%";
   document.querySelector("#wind").innerHTML =
     Math.round(response.data.wind.speed) + "km/h";
 }
-
 function search(event) {
   event.preventDefault();
   let city = document.querySelector("#citySearch").value;
