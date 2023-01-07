@@ -23,6 +23,9 @@ let day = days[now.getDay()];
 let timeToday = document.querySelector("#dateToday");
 
 timeToday.innerHTML = `${day}, ${hours}:${minutes}`;
+if (day === "Wednesday") {
+  timeToday.style.fontSize = "small";
+}
 
 function displayWeatherCondition(response) {
   let city = response.data.name;
@@ -39,6 +42,9 @@ function displayWeatherCondition(response) {
     document.querySelector("#temperatureNow").innerHTML = `${Math.round(
       response.data.main.temp
     )}`;
+  }
+  if (response.data.main.temp < -1) {
+    document.querySelector("#temperatureNow").style.left = "-30px";
   }
 
   document.querySelector("#pressure").innerHTML =
