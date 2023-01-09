@@ -1,7 +1,7 @@
 .container-weather {
   width: 750px;
   height: 540px;
-  background-color: #efb08c;
+  background-color: #e8aa8c;
   position: relative;
   margin: 100px auto;
   filter: drop-shadow(0px 0px 8px rgb(184, 184, 184));
@@ -33,10 +33,14 @@ button {
 .timetoday {
   font-family: Roboto;
   font-size: 17px;
-  left: 120px;
-  bottom: -25px;
+  left: 135px;
   position: relative;
-  text-align: left;
+}
+
+.timeicon {
+  position: relative;
+  left: 110px;
+  bottom: -24px;
 }
 
 .city {
@@ -48,17 +52,12 @@ button {
   position: relative;
 }
 
-.timeicon {
-  position: relative;
-  right: -250px;
-  top: -2px;
-}
-
 .weatherinfo {
   position: relative;
-  top: 40px;
+  top: 42px;
   left: -10px;
 }
+
 ul {
   font-family: Rubik;
   font-size: 15px;
@@ -117,7 +116,7 @@ hr.humidityline {
 
 .icontoday {
   position: relative;
-  bottom: -1px;
+  top: -1px;
   left: 20px;
 }
 
@@ -125,25 +124,22 @@ hr.humidityline {
   font-size: 87px;
   position: relative;
   font-family: Rubik;
-  left: 20px;
 }
 .unit {
   font-size: 42px;
   position: relative;
-  top: -120px;
   font-family: Rubik;
-  left: 120px;
+  margin-top: 17px;
 }
 
 .actualtemp {
   position: relative;
-  top: -81px;
-  left: 85px;
+  display: flex;
+  align-self: center;
 }
-
 .secondrow {
   position: relative;
-  top: -15px;
+  top: -13px;
   left: -5px;
 }
 
@@ -153,21 +149,21 @@ hr.boldline {
   height: 2px;
   position: relative;
   border-radius: 5px;
-  top: -150px;
   width: 660px;
   left: 28px;
   color: black;
   opacity: 80%;
+  top: -18px;
 }
 .row-cols-5 {
   position: relative;
   left: 15px;
-  top: -140px;
   font-family: Rubik;
   font-size: 16px;
   font-weight: bolder;
   text-align: center;
   right: -20px;
+  top: -8px;
 }
 
 .mondayicon {
