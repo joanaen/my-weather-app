@@ -55,13 +55,17 @@ function displayWeatherCondition(response) {
   document.querySelector("#wind").innerHTML =
     Math.round(response.data.wind.speed) + "km/h";
 }
-function search(event) {
-  event.preventDefault();
-  let city = document.querySelector("#citySearch").value;
+function search(city) {
   let apiKey = "2f82b2e1aade838b77682f4a7bfb86fe";
   let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiURL).then(displayWeatherCondition);
 }
 
+function handleSubmit(event) {
+  event.preventDefault();
+  let city = document.querySelector("#citySearch").value;
+  search(citySearch.value);
+}
+
 let searchForm = document.querySelector("#searchCity");
-searchForm.addEventListener("submit", search);
+searchForm.addEventListener("submit", handleSubmit);
