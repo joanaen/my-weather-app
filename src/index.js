@@ -43,7 +43,11 @@ function displayWeatherCondition(response) {
       response.data.main.temp
     )}`;
   }
-
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
   document.querySelector("#pressure").innerHTML =
     response.data.main.pressure + "&nbsp;hPa";
   document.querySelector("#humidity").innerHTML =
