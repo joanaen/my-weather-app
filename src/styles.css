@@ -120,7 +120,7 @@ hr.humidityline {
 
 .icontoday {
   position: relative;
-  bottom: -4px;
+  bottom: -8px;
   left: 32px;
 }
 
@@ -135,7 +135,7 @@ hr.humidityline {
   font-size: 87px;
   position: relative;
   font-family: Rubik;
-  top: -10px;
+  top: -4px;
 }
 
 .unit {
@@ -143,14 +143,14 @@ hr.humidityline {
   position: relative;
   font-family: Rubik;
   margin-top: 17px;
-  top: -16px;
+  top: -12px;
 }
 
 .actualtemp {
   position: relative;
   display: flex;
   align-self: center;
-  top: -5px;
+  top: -2px;
 }
 
 .tempCol {
@@ -168,7 +168,7 @@ hr.boldline {
   left: 28px;
   color: black;
   opacity: 80%;
-  top: -38px;
+  top: -30px;
 }
 .row-cols-5 {
   position: relative;
@@ -178,7 +178,7 @@ hr.boldline {
   font-weight: bolder;
   text-align: center;
   right: -20px;
-  top: -26px;
+  top: -20px;
 }
 
 .mondayicon {
