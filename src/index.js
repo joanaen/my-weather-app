@@ -48,6 +48,12 @@ function displayWeatherCondition(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+
+  let descriptionElement = document.querySelector("#currentInfo");
+  let sentence = response.data.weather[0].description;
+  descriptionElement.innerHTML =
+    sentence.charAt(0).toUpperCase() + sentence.slice(1);
+
   document.querySelector("#pressure").innerHTML =
     response.data.main.pressure + "&nbsp;hPa";
   document.querySelector("#humidity").innerHTML =
