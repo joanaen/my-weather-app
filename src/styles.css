@@ -32,7 +32,7 @@ button {
 }
 .timetoday {
   font-family: Rubik;
-  font-size: 17px;
+  font-size: 18px;
   left: 135px;
   position: relative;
 }
@@ -170,41 +170,25 @@ hr.boldline {
   opacity: 80%;
   top: -30px;
 }
-.row-cols-5 {
+.forecastContainer {
   position: relative;
-  left: 15px;
+  align-items: center;
   font-family: Rubik;
   font-size: 16px;
   font-weight: bolder;
+  left: 40px;
+}
+
+.dayForecast {
+  position: relative;
+  align-items: center;
   text-align: center;
-  right: -20px;
-  top: -20px;
+}
+.coded-by {
+  font-size: smaller;
+  text-align: center;
 }
 
-.mondayicon {
-  position: relative;
-  top: 10px;
-}
-
-.tuesdayicon {
-  position: relative;
-  top: 10px;
-}
-
-.wednesdayicon {
-  position: relative;
-  top: 10px;
-}
-
-.thursdayicon {
-  position: relative;
-  top: 10px;
-}
-
-.fridayicon {
-  position: relative;
-  top: 10px;
-}
 .maxtemp {
   font-size: 20px;
   font-family: Rubik;
@@ -231,7 +215,21 @@ hr.boldline {
   right: -22px;
   bottom: -50px;
 }
-.coded-by {
-  font-size: smaller;
-  text-align: center;
+
+.dayForecast {
+  font-family: Rubik;
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+  top: -20px;
+}
+
+.forecastIcon {
+  position: relative;
+  bottom: -10px;
+}
+
+.minmax-temp {
+  position: relative;
+  bottom: 10px;
 }

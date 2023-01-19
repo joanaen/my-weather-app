@@ -27,6 +27,38 @@ if (day === "Wednesday") {
   timeToday.style.fontSize = "small";
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#weatherForecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col">
+      <span class="forecastContainer">
+                <span class="dayForecast"> ${day} </span>
+                <div class="mondayicon">
+                  <img
+                    class="forecastIcon"
+                    img
+                    src="icons/rain-icon.png"
+                    width="80px"
+                    height="85px"
+                  />
+                </div>
+                <div class ="minmax-temp">
+                <span class="maxtemp"> 17º </span>
+                <span class="smallvl"></span>
+                <span class="mintemp"> 14º </span>
+                </div>
+              </span>
+              </div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function displayWeatherCondition(response) {
   let city = response.data.name;
   if (city.length > 15) {
@@ -75,3 +107,5 @@ function handleSubmit(event) {
 
 let searchForm = document.querySelector("#searchCity");
 searchForm.addEventListener("submit", handleSubmit);
+
+displayForecast();
