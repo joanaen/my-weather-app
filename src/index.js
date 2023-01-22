@@ -136,4 +136,4 @@ function handleSubmit(event) {
 let searchForm = document.querySelector("#searchCity");
 searchForm.addEventListener("submit", handleSubmit);
 
-search("Madrid");
+search("London");
