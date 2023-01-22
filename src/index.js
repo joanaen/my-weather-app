@@ -28,28 +28,30 @@ if (day === "Wednesday") {
 }
 
 function displayForecast(response) {
+  let forecast = response.data.daily;
+
   let forecastElement = document.querySelector("#weatherForecast");
   let forecastHTML = `<div class="row">`;
-  let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
-  days.forEach(function (day) {
+
+  forecast.forEach(function (forecastDay) {
     forecastHTML =
       forecastHTML +
       `<div class="col">
       <span class="forecastContainer">
-                <span class="dayForecast"> ${day} </span>
+                <span class="dayForecast"> ${forecastDay.dt} </span>
                 <div class="mondayicon">
                   <img
                     class="forecastIcon"
                     img
-                    src="icons/rain-icon.png"
-                    width="80px"
+                    src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
+                    
                     height="85px"
                   />
                 </div>
                 <div class ="minmax-temp">
-                <span class="maxtemp"> 17º </span>
+                <span class="maxtemp"> ${forecastDay.temp.max}º </span>
                 <span class="smallvl"></span>
-                <span class="mintemp"> 14º </span>
+                <span class="mintemp"> ${forecastDay.temp.min}º </span>
                 </div>
               </span>
               </div>`;
@@ -102,8 +104,6 @@ function displayWeatherCondition(response) {
   getForecast(response.data.coord);
 }
 
-displayForecast();
-
 function search(city) {
   let apiKey = "8161b4309ee03faae957729ba7104797";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -119,3 +119,5 @@ function handleSubmit(event) {
 
 let searchForm = document.querySelector("#searchCity");
 searchForm.addEventListener("submit", handleSubmit);
+
+search("Madrid");
