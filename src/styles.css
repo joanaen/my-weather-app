@@ -1,6 +1,6 @@
 .container-weather {
   width: 750px;
-  height: 540px;
+  height: 520px;
   background-color: #e8aa8c;
   position: relative;
   margin: 100px auto;
@@ -167,69 +167,53 @@ hr.boldline {
   width: 660px;
   left: 28px;
   color: black;
-  opacity: 80%;
-  top: -30px;
+  opacity: 100%;
+  top: -20px;
 }
 .forecastContainer {
-  position: relative;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  text-align: center;
+  margin-left: 10px;
+  margin-right: -30px;
   font-family: Rubik;
-  font-size: 16px;
-  font-weight: bolder;
-  left: 40px;
-}
-
-.dayForecast {
-  position: relative;
-  align-items: center;
-  text-align: center;
-}
-.coded-by {
-  font-size: smaller;
-  text-align: center;
 }
 
 .maxtemp {
-  font-size: 20px;
-  font-family: Rubik;
-  font-weight: bolder;
+  left: -10px;
   position: relative;
-  left: -4px;
-  bottom: -50px;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+.mintemp {
+  font-size: 16px;
+  right: -16px;
+  position: relative;
+}
+.minmax-temp {
+  font-family: Rubik;
 }
 
 .smallvl {
   border-left: 1px solid black;
   height: 24px;
   position: relative;
-  left: 6px;
-  bottom: -50px;
-}
-
-.mintemp {
-  font-size: 20px;
-  font-family: Rubik;
-  font-weight: lighter;
-  color: white;
-  position: relative;
-  right: -22px;
-  bottom: -50px;
 }
 
 .dayForecast {
   font-family: Rubik;
   font-size: 16px;
   font-weight: bold;
-  position: relative;
-  top: -20px;
 }
 
-.forecastIcon {
-  position: relative;
-  bottom: -10px;
-}
-
-.minmax-temp {
-  position: relative;
+.forecastIcons {
+  top: 10px;
   bottom: 10px;
+}
+
+.coded-by {
+  font-size: smaller;
+  text-align: center;
 }

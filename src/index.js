@@ -48,7 +48,7 @@ function displayForecast(response) {
       <span class="forecastContainer">
                 <span class="dayForecast"> ${formatDay(forecastDay.dt)} </span>
                 
-                <div class="mondayicon">
+                <div class="forecastIcons">
                   <img
                     class="forecastIcon"
                     img
@@ -56,7 +56,7 @@ function displayForecast(response) {
                       forecastDay.weather[0].icon
                     }@2x.png"
                     
-                    height="85px"
+                    height="90px"
                   />
                 </div>
                 <div class ="minmax-temp">
