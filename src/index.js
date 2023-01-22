@@ -27,34 +27,50 @@ if (day === "Wednesday") {
   timeToday.style.fontSize = "small";
 }
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  return days[day];
+}
+
 function displayForecast(response) {
   let forecast = response.data.daily;
 
   let forecastElement = document.querySelector("#weatherForecast");
   let forecastHTML = `<div class="row">`;
 
-  forecast.forEach(function (forecastDay) {
-    forecastHTML =
-      forecastHTML +
-      `<div class="col">
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 5) {
+      forecastHTML =
+        forecastHTML +
+        `<div class="col">
       <span class="forecastContainer">
-                <span class="dayForecast"> ${forecastDay.dt} </span>
+                <span class="dayForecast"> ${formatDay(forecastDay.dt)} </span>
+                
                 <div class="mondayicon">
                   <img
                     class="forecastIcon"
                     img
-                    src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
+                    src="http://openweathermap.org/img/wn/${
+                      forecastDay.weather[0].icon
+                    }@2x.png"
                     
                     height="85px"
                   />
                 </div>
                 <div class ="minmax-temp">
-                <span class="maxtemp"> ${forecastDay.temp.max}º </span>
+                <span class="maxtemp"> ${Math.round(
+                  forecastDay.temp.max
+                )}º </span>
                 <span class="smallvl"></span>
-                <span class="mintemp"> ${forecastDay.temp.min}º </span>
+                <span class="mintemp"> ${Math.round(
+                  forecastDay.temp.min
+                )}º </span>
                 </div>
               </span>
               </div>`;
+    }
   });
 
   forecastHTML = forecastHTML + `</div>`;
